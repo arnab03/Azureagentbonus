@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Input</title>
+<style>
+body { background-color :powderblue;}
+h1 { color: blue;}
+p  { color: red;}
+    input:invalid {
+        border: 2px dashed red;
+      }
+
+      input:invalid:required {
+        background-image: linear-gradient(to right, pink, lightgreen);
+      }
+
+      input:valid {
+        border: 2px solid black;
+      }
+</style>
+</head>
+<body>
+<h1 style="text-align:center;" > User input </h1>
+<p style="text-align:justify"><marquee direction ="right">Please enter the following fields.</marquee></p> 
+<form action="/predict" method="POST">
+<table>   
+       <tr>
+<div style="text-align: left">
+    <td>
+<label for="Age">Age:</label>
+       </td> 
+            <td>
+<input type="number" id="Age" name="Age" required min="1" max="150">  
+    </td>
+    <td>
+ <label for="Tenure">Customer Tenure:</label>       
+      </td>  
+        
+            <td>
+<input type="number" id="Tenure" name="CustTenure" required min="1">
+   </td>
+    <td>
+<label for="Channel">Policy channel:</label>
+        </td>
+        <td>
+<select id="channel" name="Channel">
+  <option value="0">Agent</option>
+  <option value="1">Third Party Partner</option>
+  <option value="2">Online</option>
+</select>
+    </td>
+    <td>
+    <label for="Prodtype">Product Type:</label>
+       </td> 
+    <td>
+<select id="prodtype" name="ExistingProdType">
+  <option value="1">A</option>
+  <option value="2">B</option>
+  <option value="3">C</option>
+    <option value="4">D</option>
+    <option value="5">E</option>
+    </select>
+        </td>
+      </div>
+           </tr>
+           <br> <br>      
+       <tr>
+  <div style="text-align: left">  
+      <td>
+      <label for="Custscore">Customer Care score:</label>
+          </td>
+      <td>
+<input type="number" id="score" name="CustCareScore" required min="1">
+      </td>
+      <td>
+      <label for="Monthly Income">Monthly Income:</label>
+          </td><td>
+<input type="number" id="income" name="MonthlyIncome" required min="1">
+      
+     </td>
+      <td>
+<label for="payementmethod">Payment Method:</label>
+          </td><td>
+<select id="Paymentmethod" name="PaymentMethod">
+  <option value="0">Half-Yearly</option>
+  <option value="1">Yearly</option>
+  <option value="2">Quaterly</option>
+    <option value="3">Monthly</option>
+    </select>
+      </td>
+      <td>
+        <label for="Gender">Gender:</label>
+              </td><td>
+        <select id="Gender" name="Gender">
+  <option value="0">Male</option>
+  <option value="1">Female</option>
+        </select>
+      </td>
+            </div>
+           
+           </tr>
+    <br><br>
+       <tr>
+         
+      <div style="text-align: left">
+           <td>
+           <label for="complaint">Complaint:</label>
+              </td>
+          <td>
+<input type="number" id="complaint" name="Complaint" required min="0">
+    </td>
+          <td>
+     <label for="Existing Policy Tenure">Existing Policy Tenure:</label>
+          </td>         
+          <td>
+<input type="number" id="tenure" name="ExistingPolicyTenure" required min="0">
+          </td>
+          <td>
+<label for="Occupation">Occupation:</label>
+                       </td><td>
+<select id="occu" name="occu">
+  <option value="0">Salaried</option>
+  <option value="1">FreeLancer</option>
+  <option value="2">Small Business</option>
+    <option value="3">Large Business</option>
+</select>  
+          </td>
+          <td>
+
+    <label for="Designatiom">Designation:</label>
+          </td>                 
+          <td>
+<select id="Designation" name="Designation">
+  <option value="0">Manager</option>
+  <option value="1">Executive</option>
+  <option value="2">VP</option>
+    <option value="3">AVP</option>
+    <option value="4">Senior Manager</option>
+    </select>
+          </td>
+      </div>
+           </tr>
+           <br><br>
+       <tr>
+      <div style="text-align: left"> 
+          <td>
+          <label for="No of Policy">Policy Count:</label>
+          </td>    
+          <td>
+<input type="number" id="Policy" name="NumberOfPolicy" required min="1">
+          </td>
+          <td>
+          <label for="Sum Assured">Sum Assured:</label>
+              </td><td>
+<input type="number" id="sumassured" name="SumAssured" required min="1000">
+          </td>
+          <td>
+       <label for="Maritalstatus">Marital Status:</label>
+          </td>    
+          <td>
+<select id="MaritalStatus" name="MaritalStatus">
+  <option value="0">Single</option>
+  <option value="1">Divorced</option>
+  <option value="2">Unmarried</option>
+    <option value="3">Married</option>
+    </select>
+        </td>
+          <td>
+      <label for="Zone">Zone:</label>
+          </td>    
+          <td>
+<select id="Zone" name="Zone">
+  <option value="0">North</option>
+  <option value="1">West</option>
+  <option value="2">East</option>
+    <option value="3">South</option>
+    </select>
+           </td> 
+           </div>
+    </tr>
+<br><br>
+<tr> 
+<div style="text-align: left">
+    <td>
+    
+<label for="lmonthcall">Last Month calls:</label>
+        </td>
+    <td>
+<input type="number" id="LastMonthCalls" name="LastMonthCalls" required min="0"> 
+    </td> 
+    <td><label for="Education">Education:</label>
+    </td>
+    <td><select id="EducationField" name="EducationField">
+  <option value="0">Graduate</option>
+  <option value="1">Post Graduate</option>
+  <option value="2">Under Graduate</option>
+    <option value="3">Engineer</option>
+    <option value="4">Diploma</option>
+    <option value="5">MBA</option>
+    </select>
+    </td>
+    </div>
+    </tr>   
+</table><br>
+    
+    <div style="text-align: center">
+        <br><br>
+<input type="submit" value="Submit">
+        </div>      
+    
+          
+ </form>       
+          
+</body>
+</html>
